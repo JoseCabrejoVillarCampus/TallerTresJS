@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" async></script>
+    <script src="ejercicio.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container pb-4" id="formulario">
+    <fieldset class="border border-primary px-2 py-2">
+      <legend>Datos de contacto de las sedes de CAMPUS:</legend><br>
+      <form id="myFormularioCampus">
+          <!-- <input type="text" name="nombreSede" placeholder="Nombre de la Sede"> -->
+          <select name="nombreSede">
+            <option value="null" selected>Ciudad</option>
+            <option value="Bucaramanga">Bucaramanga</option>
+            <option value="Mexico">México</option>
+            <option value="Medellin">Medellín</option>
+            <option value="Bogota">Bógota</option>
+          </select>
+          <input type="text" name="direccionSede" placeholder="Direccion de la Sede">
+          <input type="text" name="telefonoSede" placeholder="Telefono de la Sede"><br><br>
+          <input type="submit" value="Guardar">
+      </form>
+  </fieldset><br>
+  <fieldset class="border border-primary px-2 py-2">
+      <legend>Niveles CAMPUS:</legend><br> 
+      <form id="myFormularioNiveles">
+          <select name="sedeNivel" id="Sniveles"><option value="null" selected>Ciudad</option></select>
+          <select name="preRequisito">
+              <option value="null" selected>Nivel</option>
+              <option value="Nivel Aprendiz">Nivel Aprendiz</option>
+              <option value="Nivel Intermedio">Nivel Intermedio</option>
+              <option value="Nivel Avanzado">Nivel Avanzado</option>
+            </select>
+          <input type="submit" value="Guardar">
+      </form>
+  </fieldset><br>
+  <fieldset class="border border-primary px-2 py-2 ">
+      <legend>Datos del roadmap de CAMPUS:</legend><br>
+      <form id="myFormularioRoadmap">
+          <select name="sedeRoadmap"><option value="null" selected>Ciudad</option></select><br><br>
+          <select name="nivelEstudio">
+            <option value="null" selected>Tipo Formacion</option>
+            <option value="Tecnico">Tecnico</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Profesional">Profesional</option>
+          </select><br><br>
+          <input type="text" name="asignatura" placeholder="Asignatura">
+          <input type="text" name="numeroCreditos" placeholder="Numero de Creditos">
+          <select name="sandbox">
+            <option value="null" selected>Sandbox</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select><br><br>
+          <select name="caracter">
+            <option value="null" selected>Caracter</option>
+            <option value="Obligatoria">Obligatoria</option>
+            <option value="Electiva">Electiva</option>
+          </select>
+          <select name="presencialidad">
+            <option value="null" selected>Presencialidad</option>
+            <option value="Prescencial">Prescencial</option>
+            <option value="Remota">Remota</option>
+          </select>
+          <select name="Salon">
+            <option value="null" selected>Salon</option>
+            <option value="Apolo">Apolo</option>
+            <option value="Artemis">Artemis</option>
+            <option value="Sputnuck">Sputnuck</option>
+            <option value="Auditorio">Auditorio</option>
+            <option value="Review">Review</option>
+          </select><br><br>
+          <input type="text" name="tiempo" placeholder="Tiempo de estudio"><br><br>
+          <input type="submit" value="Guardar">
+      </form>
+  </fieldset><br>
+  <fieldset class="border border-primary px-2 py-2">
+      <legend>Datos de los campers CAMPUS:</legend><br>
+      <form id="myFormularioCampers">
+          <select name="sedeCampers" id="Scamper"><option value="null" selected>Ciudad</option></select>
+          <select name="nivelCamper" id="nivelCamper"><option value="null" selected>Nivel</option></select><br><br>
+          <input type="text" name="nombre" placeholder="Nombre del Camper">
+          <input type="tel" name="telefono" placeholder="Telefono del Camper">
+          <input type="email" name="email" placeholder="Email del Camper"><br><br>
+          <select name="teamCamper">
+              <option value="null" selected>Team</option>
+              <option value="Team 1">Team 1</option>
+              <option value="Team 2">Team 2</option>
+            </select>
+          <select name="horaingles">
+              <option value="null" selected>Horario Ingles</option>
+              <option value="10am a 11am">10am a 11am</option>
+              <option value="9am a 10am">9am a 10am</option>
+            </select>
+          <select name="horaser">
+              <option value="null" selected>Horario Ser</option>
+              <option value="8am a 9 am">8am a 9 am</option>
+              <option value="11am a 12pm">11am a 12pm</option>
+            </select><br><br>
+          <input type="text" name="barrio" placeholder="Ingrese el barrio del camper">
+          <input type="text" name="transporte" placeholder="Ingrese el medio de transporte del camper"><br><br>
+          <input type="submit" value="Guardar">
+      </form>
+  </fieldset><br>
+  <fieldset class="border border-primary px-2 pb-2 py-2">
+      <legend>Datos de los trainers CAMPUS:</legend><br>
+      <form id="myFormularioTrainers">
+          <select name="sedeTrainers" id="Strainer"><option value="null" selected>Ciudad</option></select>
+          <select name="nivelTrainer"><option value="null" selected>Nivel</option></select>
+          <select name="teamTrainer">
+            <option value="null" selected>Team</option>
+            <option value="Team1">Team 1</option>
+            <option value="Team2">Team 2</option>
+          </select><br><br>
+          <input type="text" name="nombre" placeholder="Nombre del Trainer">
+          <select name="asignaturaTrainer">
+            <option value="null" selected>Asignatura</option>
+          </select><br><br>
+          <input type="tel" name="telefono" placeholder="Telefono del Trainer">
+          <input type="email" name="email" placeholder="Email del Trainer"><br><br>
+          <input type="submit" value="Guardar">
+      </form>
+  </fieldset>
+  </div>
+    
+</body>
+</html>

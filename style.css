@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    background-color: rgba(233, 234, 238, 0.39);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#formulario{
+    margin-top: 1%;
+    display: grid;
+    justify-content: center;
+
+}
+fieldset{
+    margin-top: 2%;
+}
