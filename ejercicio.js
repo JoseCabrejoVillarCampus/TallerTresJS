@@ -25,6 +25,17 @@ let listar1= (p1,p2)=>{
         `);
     }
 };
+let listar2= (p1,p2)=>{
+    
+    let opciones = document.querySelector(p1);
+    opciones.innerHTML = null; 
+    for (let [val, id] of Object.entries(p2)) {
+        opciones.insertAdjacentHTML("beforeend", `
+            <option value="${id.asignatura}">${id.asignatura}</option>
+        `);
+    }
+};
+
 myFormularioCampus.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target))
@@ -56,7 +67,7 @@ myFormularioRoadmap.addEventListener("submit", (e)=>{
     delete data.sedeRoadmap;
     campus[`${sedeRoadmap}`]["Roadmap"].unshift(data);
     console.log(data);
-    listar1('[name="asignaturaTrainer"]', (Object.values(data)));
+    listar2('[name="asignaturaTrainer"]', campus[`${sedeRoadmap}`]["Roadmap"]);
     myFormularioRoadmap.reset();
 });
 
