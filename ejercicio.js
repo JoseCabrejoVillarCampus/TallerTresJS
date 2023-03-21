@@ -16,11 +16,12 @@ let listar= (p1,campus)=>{
     }
 };
 let listar1= (p1,p2)=>{
+    
     let opciones = document.querySelector(p1);
     opciones.innerHTML = null; 
     for (let [val, id] of Object.entries(p2)) {
         opciones.insertAdjacentHTML("beforeend", `
-            <option value="${id}">${id}</option>
+            <option value="${id.preRequisito}">${id.preRequisito}</option>
         `);
     }
 };
@@ -42,8 +43,8 @@ myFormularioNiveles.addEventListener("submit", (e)=>{
     let sedeNivel = data.sedeNivel;
     delete data.sedeNivel;
     campus[`${sedeNivel}`]["Niveles"].unshift(data); 
-    listar1('[name="nivelCamper"]', (Object.values(data)));
-    listar1('[name="nivelTrainer"]',(Object.values(data)));
+    listar1('[name="nivelCamper"]', campus[`${sedeNivel}`]["Niveles"]);
+    listar1('[name="nivelTrainer"]',campus[`${sedeNivel}`]["Niveles"]);
     myFormularioNiveles.reset();
     // console.log(data);
 })
